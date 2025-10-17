@@ -1,17 +1,17 @@
 name: first workflow
 
 on:
-  push: 
-    branches: [main, master]
+  push:
+    branches: [ main, master ]
 
 jobs:
-  name: Job1
   build:
+    name: job1
     runs-on: ubuntu-latest
     # Checkout source code 
     steps:
-      -name: Checkout repository
-       uses: actions/Checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      -name: run a custom command
-       run: echo "Hello world"
+      - name: run a custom command
+        run: echo "Hello world"
